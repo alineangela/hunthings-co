@@ -52,8 +52,8 @@
 
 .amber-test--beauty .amber-test__background,
 .amber-test--liquid .amber-test__background {
-  background-image: url("assets/category-beauty.webp");
-  background-position: center 42%;
+  background-image: url("assets/amber-resin-background.png");
+  background-position: center;
 }
 
 .amber-test--liquid .amber-test__background {
