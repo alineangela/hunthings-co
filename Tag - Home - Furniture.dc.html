@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Hunthings</title>
+  <meta property="og:site_name" content="Hunthings">
+  <meta property="og:url" content="https://hunthings.co/">
+  <meta name="twitter:domain" content="hunthings.co">
+  <link rel="icon" href="assets/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #F9F9F7; }
+    * { box-sizing: border-box; } img, x-import { user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
+    .efx-mega-menu a { transition: opacity .15s ease; }
+    .efx-mega-menu a:hover { opacity: .55; }
+    @media (max-width: 860px) {
+      header nav { display: none !important; }
+      .efx-mobile-menu-btn { display: flex !important; }
+      .efx-mega-menu > div:last-child { grid-template-columns: 1fr !important; overflow-y: auto !important; max-height: 76vh !important; }
+      .efx-mega-menu section { border-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,.1) !important; }
+      .efx-mega-menu section:last-child { border-bottom: 0 !important; }
+    }
+    footer > div { max-width: 1400px !important; }
+    footer > div > div:first-child { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; column-gap: 0 !important; align-items: stretch !important; }
+    footer > div > div:first-child > div { padding: 0 clamp(24px, 3vw, 46px) !important; border-right: 1px solid oklch(88% 0.01 70); min-height: 236px; display: flex; flex-direction: column; align-items: flex-start; }
+    footer > div > div:first-child > div:first-child { padding-left: 0 !important; }
+    footer > div > div:first-child > div:last-child { padding-right: 0 !important; border-right: 0 !important; }
+    footer > div > div:first-child a { line-height: 1.35 !important; }
+    footer > div > div:last-child { justify-content: center !important; flex-direction: column !important; text-align: center !important; gap: 12px !important; }
+    footer > div > div:last-child img { width: min(460px, 84vw) !important; height: auto !important; object-fit: contain !important; }
+    footer a { transition: color .15s ease, text-decoration-color .15s ease, opacity .15s ease; }
+    @media (max-width: 760px) {
+      footer > div > div:first-child { grid-template-columns: 1fr !important; gap: 24px !important; }
+      footer > div > div:first-child > div { padding: 0 0 24px !important; border-right: 0 !important; border-bottom: 1px solid oklch(88% 0.01 70); }
+      footer > div > div:first-child > div:last-child { border-bottom: 0 !important; padding-bottom: 0 !important; }
+    }
+  </style>
+  <script>
+    document.addEventListener('contextmenu', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+    document.addEventListener('dragstart', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+    document.addEventListener('selectstart', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+  </script></helmet>
+
+<div style="font-family: 'Inter', sans-serif; background: #F9F9F7; color: oklch(18% 0.01 60); min-height: 100vh; display: flex; flex-direction: column;" data-screen-label="Furniture">
+  <!-- FIXED HEADER — editorial open bar at top, floating pill after scroll -->
+  <header ref="{{ headerRef }}" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ scheduleClose }}" style="{{ headerOuterStyle }}">
+    <div style="{{ barStyle }}">
+      <nav style="{{ navLeftStyle }}">
+        <sc-for list="{{ navLeftList }}" as="item" hint-placeholder-count="2">
+          <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
+        </sc-for>
+      </nav>
+      <a href="Home.dc.html" style="{{ logoStyle }}">
+        <img src="assets/logo-novo-cropped.webp" alt="hunthings.co" style="{{ logoImgStyle }}" />
+      </a>
+      <nav style="{{ navRightStyle }}">
+        <sc-for list="{{ navRightList }}" as="item" hint-placeholder-count="1">
+          <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
+        </sc-for>
+        <button type="button" aria-label="Buscar" onClick="{{ toggleSearch }}" style="{{ searchIconStyle }}">
+          <svg viewBox="0 0 20 20" style="{{ searchSvgStyle }}"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><line x1="13.1" y1="13.1" x2="18" y2="18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></line></svg>
+        </button>
+      </nav>
+      <button type="button" class="efx-mobile-menu-btn" onClick="{{ toggleMobileMenu }}" style="{{ mobileBtnStyle }}" aria-label="Menu">
+        <span style="{{ mobileBarStyle }}"></span>
+        <span style="{{ mobileBarStyle }}"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SCRIM -->
+  <div onClick="{{ closeMenu }}" style="position: fixed; inset: 0; z-index: 80; background: rgba(20,20,20,.14); opacity: {{ scrimOpacity }}; pointer-events: {{ scrimEvents }}; transition: opacity .2s ease;"></div>
+
+  <!-- MEGA MENU — three editorial columns, search bar always on top -->
+  <div class="efx-mega-menu" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ scheduleClose }}" style="{{ megaOuterStyle }}">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 44px 0;">
+      <input type="text" value="{{ searchQuery }}" onChange="{{ onSearchQueryChange }}" placeholder="Search by topic (ex: skincare, productivity, smart home...)" style="width: 100%; box-sizing: border-box; padding: 14px 18px; border: 1px solid rgba(0,0,0,.14); border-radius: 10px; background: rgba(255,255,255,.7); font-family: Inter, sans-serif; font-size: 14px; color: #171717; outline: none;" />
+      <sc-if value="{{ searchQuery }}" hint-placeholder-val="false">
+        <div style="margin-top: 14px; border: 1px solid rgba(0,0,0,.1); border-radius: 12px; background: rgba(255,255,255,.78); overflow: hidden; box-shadow: 0 16px 34px rgba(0,0,0,.08);">
+          <sc-if value="{{ hasSearchResults }}" hint-placeholder-val="true">
+            <div style="display: grid; gap: 0;">
+              <sc-for list="{{ searchPreviewItems }}" as="result" hint-placeholder-count="5">
+                <a href="{{ result.href }}" style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,.07); color: #171717; text-decoration: none; font-family: Inter, sans-serif; font-size: 13px; transition: opacity .15s ease;" style-hover="opacity: .55;"><span>{{ result.label }}</span><span style="color: #8a8578; text-transform: uppercase; letter-spacing: .06em; font-size: 10px; white-space: nowrap;">{{ result.type }}</span></a>
+              </sc-for>
+            </div>
+            <a href="Busca.dc.html" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
+          </sc-if>
+          <sc-if value="{{ !hasSearchResults }}" hint-placeholder-val="false">
+            <div style="padding: 14px; color: #8a8578; font-family: Inter, sans-serif; font-size: 13px;">No results found yet.</div>
+          </sc-if>
+        </div>
+      </sc-if>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr;">
+      <section style="padding: 48px 44px; border-right: 1px solid rgba(0,0,0,.1);">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Themes for you</span>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px;">
+          <sc-for list="{{ themesList }}" as="item" hint-placeholder-count="8">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+      <section style="padding: 48px 44px; border-right: 1px solid rgba(0,0,0,.1);">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Products</span>
+        <div>
+          <sc-for list="{{ productsList }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+      <section style="padding: 48px 44px;">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Routine tools</span>
+        <div>
+          <sc-for list="{{ toolsList }}" as="item" hint-placeholder-count="4">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- HEADER SPACER -->
+  <div aria-hidden="true" style="height: 74px;"></div>
+
+  <!-- CONTENT -->
+  <section style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding: 76px 24px;">
+    <div style="max-width: 620px; display: flex; flex-direction: column; align-items: center; gap: 22px;">
+      <p style="font-family: 'Fira Code', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(45% 0.01 60); margin: 0;">Explore / Home</p>
+      <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(42px, 7vw, 66px); line-height: 1.02; margin: 0;">Furniture</h1>
+      <p style="font-size: 17px; line-height: 1.6; color: oklch(46% 0.01 60); margin: 0; max-width: 520px;">Temporary subcategory page for Furniture inside Home. This will later become a filtered page with products, posts, and editorial collections.</p>
+      <a href="Base de Categoria - Home.dc.html" style="margin-top: 10px; display: inline-block; background: oklch(20% 0.015 60); color: white; font-size: 15px; font-weight: 600; padding: 13px 24px; border-radius: 999px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 6px 12px oklch(20% 0.02 60 / 0.3);">Back to Home</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top: 1px solid oklch(88% 0.01 70); padding: 48px 32px; text-align: center; font-size: 13px; color: oklch(46% 0.01 60);"><img src="assets/logo-completo.webp" alt="hunthings" style="width: min(460px, 84vw); height: auto; display: block; margin: 0 auto 14px;" />© 2025 Hunthings.Co. All rights reserved.</footer>
+
+  <!-- COOKIE CONSENT -->
+  <sc-if value="{{ showCookieBanner }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 100; background: oklch(20% 0.015 60); color: white; padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; box-shadow: 0 -8px 24px oklch(20% 0.02 60 / 0.2);">
+      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="Politica de Privacidade.dc.html" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
+      <button onClick="{{ acceptCookies }}" style="padding: 10px 24px; border-radius: 999px; border: none; background: white; color: oklch(20% 0.015 60); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 20px oklch(20% 0.02 60 / 0.3);">Accept</button>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const THEMES_LIST = [
+  { label: 'Style', href: 'Base de categoria principal do site..dc.html' },
+  { label: 'Beauty', href: 'Base de Categoria - Beauty.dc.html' },
+  { label: 'Home', href: 'Base de Categoria - Home.dc.html' },
+  { label: 'Lifestyle', href: 'Base de Categoria - Lifestyle.dc.html' },
+  { label: 'Tech', href: 'Base de Categoria - Tech.dc.html' },
+  { label: 'Health', href: 'Base de Categoria - Health.dc.html' },
+  { label: 'Hobbies', href: 'Base de Categoria - Hobbies.dc.html' },
+  { label: 'Aesthetics', href: 'Base de Categoria - Aesthetics.dc.html' },
+];
+const PRODUCTS_LIST = [
+  { label: 'Bestsellers', href: 'Base de Products - Bestsellers.dc.html' },
+  { label: 'New', href: 'Base de Products - Novo.dc.html' },
+  { label: "Editor's Pick", href: 'Base de Products - Editors Pick.dc.html' },
+  { label: 'Trending', href: 'Base de Products - Tendencia.dc.html' },
+  { label: 'Essential', href: 'Base de Products - Essencial.dc.html' },
+];
+const TOOLS_LIST = [
+  { label: 'Patient Manager', href: 'Tool - Patient Manager.dc.html' },
+  { label: 'Life Planner', href: 'Tool - Life Planner.dc.html' },
+  { label: 'Skincare Organizer', href: 'Tool - Skincare Organizer.dc.html' },
+  { label: 'Content Hub', href: 'Tool - Content Hub.dc.html' },
+];
+class Component extends DCLogic {
+  state = {
+    menuOpen: false,
+    activeMenu: null,
+    email: '',
+    submitted: false,
+    cookiesAccepted: typeof localStorage !== 'undefined' && localStorage.getItem('hunthings_cookie_consent') === '1',
+  };
+  headerRef = React.createRef();
+
+  componentDidMount() {
+    this._headerScroll = () => {
+      const scrolledNow = window.scrollY > 100;
+      if (scrolledNow !== this.state.scrolled) this.setState({ scrolled: scrolledNow });
+    };
+    window.addEventListener('scroll', this._headerScroll, { passive: true });
+    window.addEventListener('resize', this._headerScroll);
+    this._headerScroll();
+    this._outsideClick = (e) => {
+      const inHeader = this.headerRef.current && this.headerRef.current.contains(e.target);
+      const inMega = e.target.closest && e.target.closest('.efx-mega-menu');
+      if (!inHeader && !inMega && this.state.menuOpen) {
+        this.setState({ menuOpen: false });
+      }
+    };
+    window.addEventListener('mousedown', this._outsideClick);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._headerScroll);
+    window.removeEventListener('resize', this._headerScroll);
+    clearTimeout(this._closeTimer);
+    window.removeEventListener('mousedown', this._outsideClick);
+  }
+
+  toggleMenu(name) {
+    this.setState((s) => ({ menuOpen: s.activeMenu === name ? !s.menuOpen : true, activeMenu: name }));
+  }
+  toggleMenuClick(key) {
+    clearTimeout(this._closeTimer);
+    this.setState((s) => ({ menuOpen: s.activeMenu === key ? !s.menuOpen : true, activeMenu: key }));
+  }
+
+  scheduleClose() {
+    clearTimeout(this._closeTimer);
+    this._closeTimer = setTimeout(() => this.setState({ menuOpen: false }), 160);
+  }
+
+  cancelClose() {
+    clearTimeout(this._closeTimer);
+  }
+
+  getHeaderVals() {
+    const accent = '#6c665b';
+    const open = this.state.menuOpen;
+    const scrolled = !!this.state.scrolled;
+    const activeMenu = this.state.activeMenu;
+
+    const navItemStyle = (key) => ({
+      background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+      fontWeight: 600, fontSize: scrolled ? '12px' : '13px', textTransform: 'none', letterSpacing: '.01em',
+      color: open && activeMenu === key ? accent : (scrolled ? '#20201d' : '#1a1a1a'),
+      transition: 'color .3s ease, font-size .5s ease',
+    });
+    const makeItem = (key, label) => ({ key, label, onClick: () => this.toggleMenuClick(key), style: navItemStyle(key) });
+    const navLeftList = [makeItem('explore', 'Explore'), makeItem('products', 'Products')];
+    const navRightList = [makeItem('tools', 'Tools')];
+    const barTransition = 'height .55s ease, background .55s ease, border-color .55s ease, border-width .55s ease, border-radius .55s ease, box-shadow .55s ease, padding .55s ease, backdrop-filter .55s ease, max-width .55s ease, gap .55s ease, transform .55s ease';
+    const barStyle = scrolled ? {
+      position: 'relative', maxWidth: '640px', margin: '0 auto', height: '50px', padding: '0 20px', background: 'rgba(250,249,245,.78)', border: '1px solid rgba(20,20,20,.4)', borderRadius: '999px', boxShadow: '0 10px 26px rgba(32,32,29,.08)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '56px', transition: barTransition,
+    } : {
+      position: 'relative', maxWidth: '100%', margin: '0 auto', height: '74px', padding: '0 40px', background: '#faf9f6', border: '1px solid transparent', borderBottom: '1px solid rgba(0,0,0,.12)', borderRadius: '0px', boxShadow: 'none', backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '72px', transition: barTransition,
+    };
+    return {
+      headerRef: this.headerRef,
+      searchQuery: this.state.searchQuery || '',
+      onSearchQueryChange: (e) => this.setState({ searchQuery: e.target.value }),
+      hasSearchResults: false,
+      searchPreviewItems: [],
+      headerOuterStyle: { position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 100, padding: scrolled ? '12px 12px 0' : '0', transition: 'padding .55s ease' },
+      barStyle,
+      navLeftStyle: { display: 'flex', gap: scrolled ? '22px' : '32px', alignItems: 'center', justifyContent: 'flex-end', width: '172px', flexShrink: 0, transition: 'gap .5s ease' },
+      navRightStyle: { display: 'flex', gap: scrolled ? '22px' : '32px', alignItems: 'center', justifyContent: 'flex-start', width: '172px', flexShrink: 0, transition: 'gap .5s ease' },
+      searchIconStyle: { display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a1a1a', width: scrolled ? '16px' : '18px', height: scrolled ? '16px' : '18px', background: 'none', border: 'none', padding: 0, cursor: 'pointer', outline: 'none', transition: 'width .55s ease, height .55s ease' },
+      searchSvgStyle: { width: '100%', height: '100%', display: 'block' },
+      toggleSearch: () => this.toggleMenuClick('search'),
+      navLeftList,
+      navRightList,
+      logoStyle: { display: 'block', overflow: 'hidden', flexShrink: 0, height: scrolled ? '16px' : '22px', width: scrolled ? '145px' : '199px', transition: 'height .55s ease, width .55s ease' },
+      logoImgStyle: { height: scrolled ? '16px' : '22px', width: scrolled ? '145px' : '199px', display: 'block', transition: 'height .55s ease, width .55s ease' },
+      mobileBtnStyle: { position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', width: '34px', height: '34px', display: 'none', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '5px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 },
+      mobileBarStyle: { width: '20px', height: '1.5px', background: '#1a1a1a', display: 'block' },
+      toggleMobileMenu: () => this.toggleMenuClick('explore'),
+      megaOuterStyle: { position: 'fixed', top: '74px', left: 0, right: 0, width: '100%', zIndex: 90, background: 'rgba(250,249,245,.97)', borderTop: '1px solid rgba(0,0,0,.12)', boxShadow: '0 24px 48px rgba(20,20,20,.06)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transform: open ? 'translateY(0)' : 'translateY(-8px)', transition: 'opacity .26s ease, transform .26s ease' },
+      themesList: THEMES_LIST,
+      productsList: PRODUCTS_LIST,
+      toolsList: TOOLS_LIST,
+      closeMenu: () => this.setState({ menuOpen: false }),
+      scrimOpacity: open ? 1 : 0,
+      scrimEvents: open ? 'auto' : 'none',
+      cancelClose: () => this.cancelClose(),
+      scheduleClose: () => this.scheduleClose(),
+    };
+  }
+
+  renderVals() {
+    const accentBorder = 'oklch(58% 0.012 60)';
+    return {
+      ...this.getHeaderVals(),
+      headerRef: this.headerRef,
+      searchQuery: this.state.searchQuery || '',
+      onSearchQueryChange: (e) => this.setState({ searchQuery: e.target.value }),
+      hasSearchResults: false,
+      searchPreviewItems: [],
+      megaDisplay: this.state.menuOpen ? 'block' : 'none',
+      toggleExplore: () => this.toggleMenu('explore'),
+      toggleTools: () => this.toggleMenu('tools'),
+      toggleProducts: () => this.toggleMenu('products'),
+      exploreLabelColor: this.state.menuOpen && this.state.activeMenu === 'explore' ? accentBorder : 'oklch(18% 0.01 60)',
+      toolsLabelColor: this.state.menuOpen && this.state.activeMenu === 'tools' ? accentBorder : 'oklch(18% 0.01 60)',
+      productsLabelColor: this.state.menuOpen && this.state.activeMenu === 'products' ? accentBorder : 'oklch(18% 0.01 60)',
+      email: this.state.email,
+      onEmailChange: (e) => this.setState({ email: e.target.value }),
+      submitted: this.state.submitted,
+      onSubmit: (e) => {
+        e.preventDefault();
+        if (this.state.email) this.setState({ submitted: true });
+      },
+      showCookieBanner: !this.state.cookiesAccepted,
+      acceptCookies: () => {
+        localStorage.setItem('hunthings_cookie_consent', '1');
+        this.setState({ cookiesAccepted: true });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
