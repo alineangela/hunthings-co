@@ -1,0 +1,39 @@
+/* Shared compact lockup for every Hunthings footer. */
+body footer {
+  padding-bottom: 24px !important;
+}
+
+body footer img[alt="hunthings"] {
+  width: 72px !important;
+  height: auto !important;
+  max-height: 72px !important;
+  object-fit: contain !important;
+}
+
+body footer > img[alt="hunthings"] {
+  display: block !important;
+  margin: 0 auto 8px !important;
+}
+
+body footer > div > div:last-child {
+  padding-top: 16px !important;
+  gap: 8px !important;
+}
+
+body footer > div > div:last-child img[alt="hunthings"] {
+  width: 72px !important;
+  height: auto !important;
+  max-height: 72px !important;
+}
+
+@media (max-width: 760px) {
+  body footer {
+    padding-bottom: 20px !important;
+  }
+
+  body footer img[alt="hunthings"],
+  body footer > div > div:last-child img[alt="hunthings"] {
+    width: 64px !important;
+    max-height: 64px !important;
+  }
+}
