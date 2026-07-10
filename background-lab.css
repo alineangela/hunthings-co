@@ -1,0 +1,206 @@
+.background-lab-intro {
+  padding: 56px 32px 24px;
+  background: #f8f8f6;
+  text-align: center;
+}
+
+.background-lab-intro p {
+  margin: 0 0 10px;
+  color: #777164;
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.background-lab-intro h2 {
+  margin: 0;
+  color: #211c18;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 400;
+}
+
+.amber-test {
+  position: relative;
+  min-height: 520px;
+  overflow: hidden;
+  background: #9a4818;
+  isolation: isolate;
+}
+
+.amber-test__parallax {
+  position: absolute;
+  inset: -6%;
+  transition: transform 1.2s cubic-bezier(.22, 1, .36, 1);
+  will-change: transform;
+}
+
+.amber-test__background,
+.amber-test__light {
+  position: absolute;
+  inset: 0;
+  will-change: transform, filter;
+}
+
+.amber-test__background {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  animation: amber-flow 24s ease-in-out infinite alternate;
+}
+
+.amber-test--beauty .amber-test__background,
+.amber-test--liquid .amber-test__background {
+  background-image: url("assets/category-beauty.webp");
+  background-position: center 42%;
+}
+
+.amber-test--liquid .amber-test__background {
+  filter: url("#amber-liquid-distortion") saturate(.9) contrast(1.03);
+}
+
+.amber-test--light {
+  inset: -14%;
+  background:
+    radial-gradient(circle at 18% 28%, rgba(244, 176, 87, .44) 0 8%, transparent 30%),
+    radial-gradient(circle at 78% 62%, rgba(94, 15, 29, .72) 0 14%, transparent 39%),
+    radial-gradient(circle at 48% 92%, rgba(244, 126, 32, .7) 0 12%, transparent 42%),
+    linear-gradient(128deg, #4d1423 4%, #a74317 45%, #ec8a2b 100%);
+  filter: blur(26px) saturate(1.08);
+  animation: amber-light-flow 28s ease-in-out infinite alternate;
+}
+
+.amber-test__tint {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(115deg, rgba(40, 8, 18, .72), rgba(116, 42, 21, .46) 55%, rgba(32, 7, 14, .66));
+}
+
+.amber-test--light .amber-test__tint {
+  background: linear-gradient(115deg, rgba(56, 9, 21, .36), rgba(74, 22, 10, .16), rgba(35, 7, 15, .48));
+}
+
+.amber-test__grain {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  opacity: .11;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.85'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 180px 180px;
+}
+
+.amber-test__content {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  min-height: 520px;
+  place-content: center;
+  padding: 88px 32px;
+  text-align: center;
+}
+
+.amber-test__label {
+  position: absolute;
+  top: 22px;
+  left: 24px;
+  z-index: 4;
+  padding: 7px 10px;
+  border: 1px solid rgba(255, 255, 255, .28);
+  border-radius: 999px;
+  background: rgba(20, 8, 10, .18);
+  color: rgba(255, 255, 255, .78);
+  font-family: "Fira Code", monospace;
+  font-size: 9px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  backdrop-filter: blur(8px);
+}
+
+.amber-test__eyebrow {
+  margin: 0 0 18px;
+  color: #faf39c;
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.amber-test__title {
+  margin: 0 0 18px;
+  color: #fff;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(32px, 4vw, 46px);
+  font-weight: 400;
+}
+
+.amber-test__copy {
+  max-width: 520px;
+  margin: 0 auto 28px;
+  color: rgba(255, 255, 255, .84);
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.amber-test__button {
+  display: inline-block;
+  width: fit-content;
+  max-width: min(100%, 300px);
+  margin: 0 auto;
+  padding: 15px 32px;
+  border: 1px solid rgba(255, 255, 255, .76);
+  border-radius: 999px;
+  background: #fff;
+  color: #211c18;
+  font-family: Inter, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.22;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+.amber-test__button:hover {
+  transform: translateY(-4px) scale(1.035);
+  border-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 10px 24px rgba(20, 8, 10, .25);
+}
+
+.amber-filters {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+@keyframes amber-flow {
+  0% { transform: scale(1.08) translate3d(-1%, -1%, 0); }
+  50% { transform: scale(1.13) translate3d(1.5%, .5%, 0); }
+  100% { transform: scale(1.1) translate3d(-.5%, 1.5%, 0); }
+}
+
+@keyframes amber-light-flow {
+  0% { transform: scale(1.02) translate3d(-2%, -1%, 0) rotate(-1deg); }
+  50% { transform: scale(1.09) translate3d(2%, 1%, 0) rotate(1deg); }
+  100% { transform: scale(1.04) translate3d(-1%, 2%, 0) rotate(.4deg); }
+}
+
+@media (max-width: 760px) {
+  .background-lab-intro { padding: 44px 22px 20px; }
+  .amber-test, .amber-test__content { min-height: 470px; }
+  .amber-test__content { padding: 76px 24px 64px; }
+  .amber-test__label { top: 16px; left: 16px; }
+  .amber-test__copy { font-size: 15px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .amber-test__background,
+  .amber-test__light { animation: none; }
+  .amber-test__parallax { transform: none !important; transition: none; }
+  .amber-test__button { transition: none; }
+}
