@@ -96,7 +96,10 @@ function rewriteLinks(html) {
     updated = updated.split(oldPath).join(newPath);
   }
   updated = updated.replace(/\s*<base href="\/">\s*/g, '\n');
-  return updated.replace('<head>', '<head>\n<base href="/">');
+  updated = updated.replace('<head>', '<head>\n<base href="/">');
+  updated = updated.replace(/<link rel="stylesheet" href="footer-standard\.css">/g, '<link rel="stylesheet" href="footer-standard.css">\n<link rel="stylesheet" href="site-global.css">');
+  updated = updated.replace(/<script src="\.\/support\.js"><\/script>/g, '<script src="./support.js"></script>\n<script defer src="site-global.js"></script>');
+  return updated;
 }
 
 const rootPages = (await readdir(root)).filter((file) => file.endsWith('.html'));

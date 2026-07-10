@@ -1,0 +1,26 @@
+/* Shared visual rules applied after the DC templates render. */
+.hunthings-life-planner { position: relative; isolation: isolate; min-height: 430px; display: grid; place-items: center; overflow: hidden; padding: 72px 32px; background: #3b1509 url('/assets/life-planner-background.png') center / cover no-repeat; color: #fff; text-align: center; }
+.hunthings-life-planner::before { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(90deg, rgba(20, 7, 2, .55), rgba(20, 7, 2, .16), rgba(20, 7, 2, .62)); }
+.hunthings-life-planner__content { max-width: 730px; }
+.hunthings-life-planner__eyebrow { margin: 0 0 16px; color: #faf39c; font: 600 12px/1.2 'Inter', sans-serif; letter-spacing: .1em; text-transform: uppercase; }
+.hunthings-life-planner h2 { margin: 0 0 18px; color: white; font: 400 clamp(38px, 5vw, 58px)/1.04 'Instrument Serif', serif; }
+.hunthings-life-planner p { max-width: 640px; margin: 0 auto; color: rgba(255,255,255,.92); font: 400 17px/1.65 'Inter', sans-serif; }
+.hunthings-life-planner a { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; margin-top: 30px; padding: 0 28px; border: 1px solid rgba(255,255,255,.76); border-radius: 999px; background: white; color: #1d130e; font: 600 15px 'Inter', sans-serif; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease; }
+.hunthings-life-planner a:hover { transform: translateY(-3px) scale(1.025); box-shadow: 0 12px 24px rgba(0,0,0,.28); }
+.hunthings-coming-soon { flex: 1; display: grid; place-items: center; min-height: 52vh; padding: 80px 24px; text-align: center; }
+.hunthings-coming-soon__inner { max-width: 600px; }
+.hunthings-coming-soon h1 { margin: 0; font: 400 clamp(42px, 7vw, 64px)/1.02 'Instrument Serif', serif; }
+.hunthings-coming-soon p { margin: 22px auto 0; max-width: 510px; color: oklch(46% .01 60); font: 400 17px/1.65 'Inter', sans-serif; }
+.hunthings-coming-soon h3 { margin: 36px 0 16px; font: 500 23px/1.2 'Instrument Serif', serif; }
+.hunthings-coming-soon form { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.hunthings-coming-soon input { min-width: min(100%, 280px); padding: 14px 18px; border: 1px solid oklch(84% .01 70); border-radius: 999px; background: white; font: 15px 'Inter', sans-serif; }
+.hunthings-coming-soon button { padding: 14px 24px; border: 0; border-radius: 999px; background: oklch(20% .015 60); color: white; font: 600 15px 'Inter', sans-serif; cursor: pointer; }
+.hunthings-product-carousel { position: relative; }
+.hunthings-product-carousel__track { border: 1px solid #201712; border-radius: 18px; scrollbar-color: #201712 white; scrollbar-width: thin; }
+.hunthings-product-carousel__track::-webkit-scrollbar { height: 12px; }
+.hunthings-product-carousel__track::-webkit-scrollbar-track { border: 1px solid #201712; border-radius: 999px; background: white; }
+.hunthings-product-carousel__track::-webkit-scrollbar-thumb { border: 3px solid white; border-radius: 999px; background: #201712; }
+.hunthings-product-carousel__arrow { position: absolute; top: 50%; z-index: 2; width: 34px; height: 34px; border: 1px solid #201712; border-radius: 50%; background: white; color: #201712; cursor: pointer; transform: translateY(-50%); font-size: 20px; line-height: 1; }
+.hunthings-product-carousel__arrow--prev { left: -12px; }.hunthings-product-carousel__arrow--next { right: -12px; }
+.background-lab-intro, .amber-test, .amber-filters { display: none !important; }
+@media (max-width: 640px) { .hunthings-life-planner { min-height: 500px; padding: 64px 22px; }.hunthings-coming-soon { padding: 64px 20px; }.hunthings-product-carousel__arrow--prev { left: 4px; }.hunthings-product-carousel__arrow--next { right: 4px; } }
