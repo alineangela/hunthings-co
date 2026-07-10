@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+<link rel="stylesheet" href="footer-standard.css">
+  <!-- seo-route:start -->
+  <title>Contact Hunthings | Hunthings</title>
+  <meta name="description" content="Contact Hunthings from Hunthings, a curated discovery platform for people who care about quality, details and better choices.">
+  <link rel="canonical" href="https://hunthings.co/contact/">
+  <!-- seo-route:end -->
+</head>
+<body>
+<x-dc>
+<helmet>
+  <title>Contact Hunthings | Hunthings</title>
+  <meta property="og:site_name" content="Hunthings">
+  <meta property="og:url" content="https://hunthings.co/contact/">
+  <meta name="twitter:domain" content="hunthings.co">
+  <link rel="icon" href="assets/favicon.webp" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    body { margin: 0; background: #F9F9F7; }
+    * { box-sizing: border-box; } img, x-import { user-select: none; -webkit-user-drag: none; -webkit-touch-callout: none; }
+    .efx-mega-menu a { transition: opacity .15s ease; }
+    .efx-mega-menu a:hover { opacity: .55; }
+    @media (max-width: 860px) {
+      header nav { display: none !important; }
+      .efx-mobile-menu-btn { display: flex !important; }
+      .efx-mega-menu > div:last-child { grid-template-columns: 1fr !important; overflow-y: auto !important; max-height: 76vh !important; }
+      .efx-mega-menu section { border-right: 0 !important; border-bottom: 1px solid rgba(0,0,0,.1) !important; }
+      .efx-mega-menu section:last-child { border-bottom: 0 !important; }
+    }
+    footer > div { max-width: 1400px !important; }
+    footer > div > div:first-child { display: grid !important; grid-template-columns: repeat(5, minmax(0, 1fr)) !important; column-gap: 0 !important; align-items: stretch !important; }
+    footer > div > div:first-child > div { padding: 0 clamp(24px, 3vw, 46px) !important; border-right: 1px solid oklch(88% 0.01 70); min-height: 236px; display: flex; flex-direction: column; align-items: flex-start; }
+    footer > div > div:first-child > div:first-child { padding-left: 0 !important; }
+    footer > div > div:first-child > div:last-child { padding-right: 0 !important; border-right: 0 !important; }
+    footer > div > div:first-child a { line-height: 1.35 !important; }
+    footer > div > div:last-child { justify-content: center !important; flex-direction: column !important; text-align: center !important; gap: 12px !important; }
+    footer > div > div:last-child img { width: min(460px, 84vw) !important; height: auto !important; object-fit: contain !important; }
+    footer a { transition: color .15s ease, text-decoration-color .15s ease, opacity .15s ease; }
+    @media (max-width: 760px) {
+      footer > div > div:first-child { grid-template-columns: 1fr !important; gap: 24px !important; }
+      footer > div > div:first-child > div { padding: 0 0 24px !important; border-right: 0 !important; border-bottom: 1px solid oklch(88% 0.01 70); }
+      footer > div > div:first-child > div:last-child { border-bottom: 0 !important; padding-bottom: 0 !important; }
+    }
+  </style>
+  <script>
+    document.addEventListener('contextmenu', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+    document.addEventListener('dragstart', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+    document.addEventListener('selectstart', function(e){ if (e.target && e.target.closest && e.target.closest('img, x-import')) e.preventDefault(); }, true);
+  </script></helmet>
+
+<div style="font-family: 'Inter', sans-serif; background: #F9F9F7; color: oklch(18% 0.01 60); min-height: 100vh;" data-screen-label="Contato">
+  <!-- FIXED HEADER — editorial open bar at top, floating pill after scroll -->
+  <header ref="{{ headerRef }}" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ scheduleClose }}" style="{{ headerOuterStyle }}">
+    <div style="{{ barStyle }}">
+      <nav style="{{ navLeftStyle }}">
+        <sc-for list="{{ navLeftList }}" as="item" hint-placeholder-count="2">
+          <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
+        </sc-for>
+      </nav>
+      <a href="/" style="{{ logoStyle }}">
+        <img src="assets/logo-novo-cropped.webp" alt="hunthings.co" style="{{ logoImgStyle }}" />
+      </a>
+      <nav style="{{ navRightStyle }}">
+        <sc-for list="{{ navRightList }}" as="item" hint-placeholder-count="1">
+          <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
+        </sc-for>
+        <button type="button" aria-label="Buscar" onClick="{{ toggleSearch }}" style="{{ searchIconStyle }}">
+          <svg viewBox="0 0 20 20" style="{{ searchSvgStyle }}"><circle cx="8.5" cy="8.5" r="6" fill="none" stroke="currentColor" stroke-width="1.4"></circle><line x1="13.1" y1="13.1" x2="18" y2="18" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"></line></svg>
+        </button>
+      </nav>
+      <button type="button" class="efx-mobile-menu-btn" onClick="{{ toggleMobileMenu }}" style="{{ mobileBtnStyle }}" aria-label="Menu">
+        <span style="{{ mobileBarStyle }}"></span>
+        <span style="{{ mobileBarStyle }}"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- SCRIM -->
+  <div onClick="{{ closeMenu }}" style="position: fixed; inset: 0; z-index: 80; background: rgba(20,20,20,.14); opacity: {{ scrimOpacity }}; pointer-events: {{ scrimEvents }}; transition: opacity .2s ease;"></div>
+
+  <!-- MEGA MENU — three editorial columns, search bar always on top -->
+  <div class="efx-mega-menu" onMouseEnter="{{ cancelClose }}" onMouseLeave="{{ scheduleClose }}" style="{{ megaOuterStyle }}">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 28px 44px 0;">
+      <input type="text" value="{{ searchQuery }}" onChange="{{ onSearchQueryChange }}" placeholder="Search by topic (ex: skincare, productivity, smart home...)" style="width: 100%; box-sizing: border-box; padding: 14px 18px; border: 1px solid rgba(0,0,0,.14); border-radius: 10px; background: rgba(255,255,255,.7); font-family: Inter, sans-serif; font-size: 14px; color: #171717; outline: none;" />
+      <sc-if value="{{ searchQuery }}" hint-placeholder-val="false">
+        <div style="margin-top: 14px; border: 1px solid rgba(0,0,0,.1); border-radius: 12px; background: rgba(255,255,255,.78); overflow: hidden; box-shadow: 0 16px 34px rgba(0,0,0,.08);">
+          <sc-if value="{{ hasSearchResults }}" hint-placeholder-val="true">
+            <div style="display: grid; gap: 0;">
+              <sc-for list="{{ searchPreviewItems }}" as="result" hint-placeholder-count="5">
+                <a href="{{ result.href }}" style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,.07); color: #171717; text-decoration: none; font-family: Inter, sans-serif; font-size: 13px; transition: opacity .15s ease;" style-hover="opacity: .55;"><span>{{ result.label }}</span><span style="color: #8a8578; text-transform: uppercase; letter-spacing: .06em; font-size: 10px; white-space: nowrap;">{{ result.type }}</span></a>
+              </sc-for>
+            </div>
+            <a href="/search/" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
+          </sc-if>
+          <sc-if value="{{ !hasSearchResults }}" hint-placeholder-val="false">
+            <div style="padding: 14px; color: #8a8578; font-family: Inter, sans-serif; font-size: 13px;">No results found yet.</div>
+          </sc-if>
+        </div>
+      </sc-if>
+    </div>
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1.3fr 1fr 1fr;">
+      <section style="padding: 48px 44px; border-right: 1px solid rgba(0,0,0,.1);">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Themes for you</span>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 32px;">
+          <sc-for list="{{ themesList }}" as="item" hint-placeholder-count="8">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+      <section style="padding: 48px 44px; border-right: 1px solid rgba(0,0,0,.1);">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Products</span>
+        <div>
+          <sc-for list="{{ productsList }}" as="item" hint-placeholder-count="5">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+      <section style="padding: 48px 44px;">
+        <span style="display: block; margin-bottom: 24px; font-family: Inter, sans-serif; font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: #8a8578;">Routine tools</span>
+        <div>
+          <sc-for list="{{ toolsList }}" as="item" hint-placeholder-count="4">
+            <a href="{{ item.href }}" style="display: block; padding: 10px 0; border-bottom: 1px solid rgba(0,0,0,.08); font-family: Inter, sans-serif; font-size: 14px; color: #171717; text-decoration: none; transition: opacity .15s ease;" style-hover="opacity: .55;">{{ item.label }}</a>
+          </sc-for>
+        </div>
+      </section>
+    </div>
+  </div>
+  <!-- HEADER SPACER -->
+  <div aria-hidden="true" style="height: 74px;"></div>
+
+  <!-- CONTENT -->
+  <section style="max-width: 700px; margin: 0 auto; padding: 64px 32px 80px;">
+    <h1 style="font-family: 'Instrument Serif', serif; font-weight: 500; font-size: 40px; margin: 0 0 28px;">Contact</h1>
+    <p style="font-size: 17px; line-height: 1.75; color: oklch(24% 0.01 60); margin: 0 0 32px;">Dúvidas, parcerias ou sugestões de pauta? Fale com a gente.</p>
+    <sc-if value="{{ !formSubmitted }}" hint-placeholder-val="{{ true }}">
+      <form onSubmit="{{ onFormSubmit }}" style="display: flex; flex-direction: column; gap: 18px;">
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Nome completo</label>
+          <input type="text" required="{{ true }}" pattern="{{ namePattern }}" title="Digite nome e sobrenome" value="{{ name }}" onChange="{{ onNameChange }}" placeholder="Nome e sobrenome" style="width: 100%; font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 10px; border: 1px solid oklch(88% 0.01 70); outline: none; color: oklch(18% 0.01 60);" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">E-mail</label>
+          <input type="email" required="{{ true }}" value="{{ email }}" onChange="{{ onEmailChange }}" placeholder="you@email.com" style="width: 100%; font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 10px; border: 1px solid oklch(88% 0.01 70); outline: none; color: oklch(18% 0.01 60);" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Empresa <span style="color: oklch(46% 0.01 60); font-weight: 400;">(opcional)</span></label>
+          <input type="text" value="{{ company }}" onChange="{{ onCompanyChange }}" placeholder="Nome da empresa que você representa" style="width: 100%; font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 10px; border: 1px solid oklch(88% 0.01 70); outline: none; color: oklch(18% 0.01 60);" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">País</label>
+          <input type="text" required="{{ true }}" value="{{ country }}" onChange="{{ onCountryChange }}" placeholder="Onde você está" style="width: 100%; font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 10px; border: 1px solid oklch(88% 0.01 70); outline: none; color: oklch(18% 0.01 60);" />
+        </div>
+        <div>
+          <label style="display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px;">Mensagem</label>
+          <textarea required="{{ true }}" value="{{ message }}" onChange="{{ onMessageChange }}" placeholder="Conte com detalhes o que você precisa" rows="8" style="width: 100%; font-family: 'Inter', sans-serif; font-size: 15px; padding: 14px 16px; border-radius: 10px; border: 1px solid oklch(88% 0.01 70); outline: none; color: oklch(18% 0.01 60); resize: vertical;"></textarea>
+        </div>
+        <button type="submit" style="align-self: flex-start; background: oklch(20% 0.015 60); color: white; font-size: 15px; font-weight: 600; padding: 15px 30px; border-radius: 999px; border: none; cursor: pointer; margin-top: 8px; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 12px 22px oklch(20% 0.02 60 / 0.3);">Enviar mensagem</button>
+      </form>
+    </sc-if>
+    <sc-if value="{{ formSubmitted }}" hint-placeholder-val="{{ false }}">
+      <div style="background: white; border: 1px solid oklch(88% 0.01 70); border-radius: 14px; padding: 32px; font-size: 16px;">Mensagem enviada — obrigado pelo contato! Responderemos em breve.</div>
+    </sc-if>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="border-top: 1px solid oklch(88% 0.01 70); padding: 56px 32px 32px;">
+    <div style="max-width: 1240px; margin: 0 auto;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 32px; margin-bottom: 40px;">
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Explore</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="/explore/style/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Style</a>
+            <a href="/explore/beauty/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Beauty</a>
+            <a href="/explore/home/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Home</a>
+            <a href="/explore/lifestyle/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Lifestyle</a>
+            <a href="/explore/tech/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Tech</a>
+            <a href="/explore/health/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Health</a>
+            <a href="/explore/hobbies/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Hobbies</a>
+            <a href="/explore/aesthetics/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Aesthetics</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Tools</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="/tools/patient-manager/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Patient Manager</a>
+            <a href="/tools/life-planner/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Life Planner</a>
+            <a href="/tools/skincare-organizer/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Skincare Organizer</a>
+            <a href="/tools/content-hub/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Content Hub</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Products</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="/products/bestsellers/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Bestsellers</a>
+            <a href="/products/new/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">New</a>
+            <a href="/products/editors-pick/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Editor's Pick</a>
+            <a href="/products/trending/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Trending</a>
+            <a href="/products/essential/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Essential</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Site</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="/about/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">About</a>
+            <a href="/contact/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Contact</a>
+            <a href="/search/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Search</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Legal</div>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="/privacy-policy/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Privacy Policy</a>
+            <a href="/terms-of-use/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Terms of Use</a>
+            <a href="/affiliate-disclosure/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Affiliate Disclosure</a>
+          </div>
+        </div>
+      </div>
+      <div style="border-top: 1px solid oklch(88% 0.01 70); padding-top: 28px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; text-align: center;"><img src="assets/logo-completo.webp" alt="hunthings" style="height: auto; width: min(460px, 84vw); display: block;" /><span style="font-size: 13px; color: oklch(46% 0.01 60);">© 2025 Hunthings.Co. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <!-- COOKIE CONSENT -->
+  <sc-if value="{{ showCookieBanner }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 100; background: oklch(20% 0.015 60); color: white; padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; box-shadow: 0 -8px 24px oklch(20% 0.02 60 / 0.2);">
+      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="/privacy-policy/" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
+      <button onClick="{{ acceptCookies }}" style="padding: 10px 24px; border-radius: 999px; border: none; background: white; color: oklch(20% 0.015 60); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 20px oklch(20% 0.02 60 / 0.3);">Aceitar</button>
+    </div>
+  </sc-if>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const THEMES_LIST = [
+  { label: 'Style', href: '/explore/style/' },
+  { label: 'Beauty', href: '/explore/beauty/' },
+  { label: 'Home', href: '/explore/home/' },
+  { label: 'Lifestyle', href: '/explore/lifestyle/' },
+  { label: 'Tech', href: '/explore/tech/' },
+  { label: 'Health', href: '/explore/health/' },
+  { label: 'Hobbies', href: '/explore/hobbies/' },
+  { label: 'Aesthetics', href: '/explore/aesthetics/' },
+];
+const PRODUCTS_LIST = [
+  { label: 'Bestsellers', href: '/products/bestsellers/' },
+  { label: 'New', href: '/products/new/' },
+  { label: "Editor's Pick", href: '/products/editors-pick/' },
+  { label: 'Trending', href: '/products/trending/' },
+  { label: 'Essential', href: '/products/essential/' },
+];
+const TOOLS_LIST = [
+  { label: 'Patient Manager', href: '/tools/patient-manager/' },
+  { label: 'Life Planner', href: '/tools/life-planner/' },
+  { label: 'Skincare Organizer', href: '/tools/skincare-organizer/' },
+  { label: 'Content Hub', href: '/tools/content-hub/' },
+];
+const POSTS = [
+  { title: 'Como montar um capsule wardrobe de verdade', excerpt: 'Menos peças, mais combinações — o guia prático pra parar de comprar sem pensar, de vez.', href: '/templates/blog-post/' },
+  { title: 'Streetwear além do hype', excerpt: 'Marcas e peças que sobrevivem à moda passageira e valem o investimento.', href: '/templates/blog-post/' },
+];
+const PRODUCTS = [
+  { name: 'Jaqueta utilitária', href: '#' },
+  { name: 'Bota de couro', href: '#' },
+  { name: 'Cinto reversível', href: '#' },
+];
+const TOOLS = [
+  { name: 'Patient Manager', href: '/tools/patient-manager/' },
+  { name: 'Life Planner', href: '/tools/life-planner/' },
+  { name: 'Skincare Organizer', href: '/tools/skincare-organizer/' },
+  { name: 'Content Hub', href: '/tools/content-hub/' },
+];
+
+class Component extends DCLogic {
+  state = {
+    menuOpen: false,
+    activeMenu: null,
+    name: '',
+    email: '',
+    company: '',
+    country: '',
+    message: '',
+    formSubmitted: false,
+    searchQuery: '',
+    searchExpanded: false,
+    cookiesAccepted: typeof localStorage !== 'undefined' && localStorage.getItem('hunthings_cookie_consent') === '1',
+  };
+  headerRef = React.createRef();
+
+  componentDidMount() {
+    this._headerScroll = () => {
+      const scrolledNow = window.scrollY > 100;
+      if (scrolledNow !== this.state.scrolled) this.setState({ scrolled: scrolledNow });
+    };
+    window.addEventListener('scroll', this._headerScroll, { passive: true });
+    window.addEventListener('resize', this._headerScroll);
+    this._headerScroll();
+    this._outsideClick = (e) => {
+      const inHeader = this.headerRef.current && this.headerRef.current.contains(e.target);
+      const inMega = e.target.closest && e.target.closest('.efx-mega-menu');
+      if (!inHeader && !inMega && this.state.menuOpen) {
+        this.setState({ menuOpen: false });
+      }
+    };
+    window.addEventListener('mousedown', this._outsideClick);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this._headerScroll);
+    window.removeEventListener('resize', this._headerScroll);
+    clearTimeout(this._closeTimer);
+    window.removeEventListener('mousedown', this._outsideClick);
+  }
+
+  toggleMenu(name) {
+    this.setState((s) => ({ menuOpen: s.activeMenu === name ? !s.menuOpen : true, activeMenu: name }));
+  }
+  toggleMenuClick(key) {
+    clearTimeout(this._closeTimer);
+    this.setState((s) => ({ menuOpen: s.activeMenu === key ? !s.menuOpen : true, activeMenu: key }));
+  }
+
+  scheduleClose() {
+    clearTimeout(this._closeTimer);
+    this._closeTimer = setTimeout(() => this.setState({ menuOpen: false }), 160);
+  }
+
+  cancelClose() {
+    clearTimeout(this._closeTimer);
+  }
+
+  getHeaderVals() {
+    const accent = '#6c665b';
+    const open = this.state.menuOpen;
+    const scrolled = !!this.state.scrolled;
+    const activeMenu = this.state.activeMenu;
+
+    const navItemStyle = (key) => ({
+      background: 'none', border: 'none', padding: 0, cursor: 'pointer', fontFamily: 'Inter, sans-serif',
+      fontWeight: 600, fontSize: scrolled ? '12px' : '13px', textTransform: 'none', letterSpacing: '.01em',
+      color: open && activeMenu === key ? accent : (scrolled ? '#20201d' : '#1a1a1a'),
+      transition: 'color .3s ease, font-size .5s ease',
+    });
+    const makeItem = (key, label) => ({ key, label, onClick: () => this.toggleMenuClick(key), style: navItemStyle(key) });
+    const navLeftList = [makeItem('explore', 'Explore'), makeItem('products', 'Products')];
+    const navRightList = [makeItem('tools', 'Tools')];
+    const barTransition = 'height .55s ease, background .55s ease, border-color .55s ease, border-width .55s ease, border-radius .55s ease, box-shadow .55s ease, padding .55s ease, backdrop-filter .55s ease, max-width .55s ease, gap .55s ease, transform .55s ease';
+    const barStyle = scrolled ? {
+      position: 'relative', maxWidth: '640px', margin: '0 auto', height: '50px', padding: '0 20px', background: 'rgba(250,249,245,.78)', border: '1px solid rgba(20,20,20,.4)', borderRadius: '999px', boxShadow: '0 10px 26px rgba(32,32,29,.08)', backdropFilter: 'blur(16px)', WebkitBackdropFilter: 'blur(16px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '56px', transition: barTransition,
+    } : {
+      position: 'relative', maxWidth: '100%', margin: '0 auto', height: '74px', padding: '0 40px', background: '#faf9f6', border: '1px solid transparent', borderBottom: '1px solid rgba(0,0,0,.12)', borderRadius: '0px', boxShadow: 'none', backdropFilter: 'blur(0px)', WebkitBackdropFilter: 'blur(0px)', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '72px', transition: barTransition,
+    };
+    return {
+      headerRef: this.headerRef,
+      headerOuterStyle: { position: 'fixed', top: 0, left: 0, width: '100%', zIndex: 100, padding: scrolled ? '12px 12px 0' : '0', transition: 'padding .55s ease' },
+      barStyle,
+      navLeftStyle: { display: 'flex', gap: scrolled ? '22px' : '32px', alignItems: 'center', justifyContent: 'flex-end', width: '172px', flexShrink: 0, transition: 'gap .5s ease' },
+      navRightStyle: { display: 'flex', gap: scrolled ? '22px' : '32px', alignItems: 'center', justifyContent: 'flex-start', width: '172px', flexShrink: 0, transition: 'gap .5s ease' },
+      searchIconStyle: { display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a1a1a', width: scrolled ? '16px' : '18px', height: scrolled ? '16px' : '18px', background: 'none', border: 'none', padding: 0, cursor: 'pointer', outline: 'none', transition: 'width .55s ease, height .55s ease' },
+      searchSvgStyle: { width: '100%', height: '100%', display: 'block' },
+      toggleSearch: () => this.toggleMenuClick('search'),
+      navLeftList,
+      navRightList,
+      logoStyle: { display: 'block', overflow: 'hidden', flexShrink: 0, height: scrolled ? '16px' : '22px', width: scrolled ? '145px' : '199px', transition: 'height .55s ease, width .55s ease' },
+      logoImgStyle: { height: scrolled ? '16px' : '22px', width: scrolled ? '145px' : '199px', display: 'block', transition: 'height .55s ease, width .55s ease' },
+      mobileBtnStyle: { position: 'absolute', right: '10px', top: '50%', transform: 'translateY(-50%)', width: '34px', height: '34px', display: 'none', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', gap: '5px', background: 'none', border: 'none', cursor: 'pointer', padding: 0 },
+      mobileBarStyle: { width: '20px', height: '1.5px', background: '#1a1a1a', display: 'block' },
+      toggleMobileMenu: () => this.toggleMenuClick('explore'),
+      megaOuterStyle: { position: 'fixed', top: '74px', left: 0, right: 0, width: '100%', zIndex: 90, background: 'rgba(250,249,245,.97)', borderTop: '1px solid rgba(0,0,0,.12)', boxShadow: '0 24px 48px rgba(20,20,20,.06)', opacity: open ? 1 : 0, pointerEvents: open ? 'auto' : 'none', transform: open ? 'translateY(0)' : 'translateY(-8px)', transition: 'opacity .26s ease, transform .26s ease' },
+      themesList: THEMES_LIST,
+      productsList: PRODUCTS_LIST,
+      toolsList: TOOLS_LIST,
+      closeMenu: () => this.setState({ menuOpen: false }),
+      scrimOpacity: open ? 1 : 0,
+      scrimEvents: open ? 'auto' : 'none',
+      cancelClose: () => this.cancelClose(),
+      scheduleClose: () => this.scheduleClose(),
+    };
+  }
+
+  renderVals() {
+    const accentBorder = 'oklch(58% 0.012 60)';
+    const q = this.state.searchQuery.trim().toLowerCase();
+    const postMatches = q ? POSTS.filter((p) => p.title.toLowerCase().includes(q) || p.excerpt.toLowerCase().includes(q)) : [];
+    const productMatches = q ? PRODUCTS.filter((p) => p.name.toLowerCase().includes(q)) : [];
+    const toolMatches = q ? TOOLS.filter((t) => t.name.toLowerCase().includes(q)) : [];
+    const allMatches = [
+      ...postMatches.map((p) => ({ label: p.title, type: 'Post', href: p.href })),
+      ...productMatches.map((p) => ({ label: p.name, type: 'Produto', href: p.href })),
+      ...toolMatches.map((t) => ({ label: t.name, type: 'Tools', href: t.href })),
+    ];
+
+    return {
+      ...this.getHeaderVals(),
+      headerRef: this.headerRef,
+      megaDisplay: this.state.menuOpen ? 'block' : 'none',
+      toggleExplore: () => this.toggleMenu('explore'),
+      toggleTools: () => this.toggleMenu('tools'),
+      toggleProducts: () => this.toggleMenu('products'),
+      exploreLabelColor: this.state.menuOpen && this.state.activeMenu === 'explore' ? accentBorder : 'oklch(18% 0.01 60)',
+      toolsLabelColor: this.state.menuOpen && this.state.activeMenu === 'tools' ? accentBorder : 'oklch(18% 0.01 60)',
+      productsLabelColor: this.state.menuOpen && this.state.activeMenu === 'products' ? accentBorder : 'oklch(18% 0.01 60)',
+      searchQuery: this.state.searchQuery,
+      onSearchQueryChange: (e) => this.setState({ searchQuery: e.target.value, searchExpanded: false }),
+      hasSearchResults: allMatches.length > 0,
+      searchExpanded: this.state.searchExpanded,
+      expandSearch: () => this.setState({ searchExpanded: true }),
+      allMatches,
+      previewPosts: postMatches.slice(0, 3).map((p) => ({ label: p.title, href: p.href })),
+      previewProducts: productMatches.slice(0, 3).map((p) => ({ label: p.name, href: p.href })),
+      previewTools: toolMatches.slice(0, 3).map((t) => ({ label: t.name, href: t.href })),
+      showCookieBanner: !this.state.cookiesAccepted,
+      name: this.state.name,
+      onNameChange: (e) => this.setState({ name: e.target.value }),
+      namePattern: '.*\\S+\\s+\\S+.*',
+      email: this.state.email,
+      onEmailChange: (e) => this.setState({ email: e.target.value }),
+      company: this.state.company,
+      onCompanyChange: (e) => this.setState({ company: e.target.value }),
+      country: this.state.country,
+      onCountryChange: (e) => this.setState({ country: e.target.value }),
+      message: this.state.message,
+      onMessageChange: (e) => this.setState({ message: e.target.value }),
+      formSubmitted: this.state.formSubmitted,
+      onFormSubmit: (e) => {
+        e.preventDefault();
+        this.setState({ formSubmitted: true });
+      },
+      acceptCookies: () => {
+        localStorage.setItem('hunthings_cookie_consent', '1');
+        this.setState({ cookiesAccepted: true });
+      },
+    };
+  }
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+

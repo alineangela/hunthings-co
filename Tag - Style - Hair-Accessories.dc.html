@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -58,7 +59,7 @@
           <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
         </sc-for>
       </nav>
-      <a href="Home.dc.html" style="{{ logoStyle }}">
+      <a href="/" style="{{ logoStyle }}">
         <img src="assets/logo-novo-cropped.webp" alt="hunthings.co" style="{{ logoImgStyle }}" />
       </a>
       <nav style="{{ navRightStyle }}">
@@ -91,7 +92,7 @@
                 <a href="{{ result.href }}" style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,.07); color: #171717; text-decoration: none; font-family: Inter, sans-serif; font-size: 13px; transition: opacity .15s ease;" style-hover="opacity: .55;"><span>{{ result.label }}</span><span style="color: #8a8578; text-transform: uppercase; letter-spacing: .06em; font-size: 10px; white-space: nowrap;">{{ result.type }}</span></a>
               </sc-for>
             </div>
-            <a href="Busca.dc.html" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
+            <a href="/search/" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
           </sc-if>
           <sc-if value="{{ !hasSearchResults }}" hint-placeholder-val="false">
             <div style="padding: 14px; color: #8a8578; font-family: Inter, sans-serif; font-size: 13px;">No results found yet.</div>
@@ -135,7 +136,7 @@
       <p style="font-family: 'Fira Code', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: oklch(45% 0.01 60); margin: 0;">Explore / Style</p>
       <h1 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: clamp(42px, 7vw, 66px); line-height: 1.02; margin: 0;">Hair Accessories</h1>
       <p style="font-size: 17px; line-height: 1.6; color: oklch(46% 0.01 60); margin: 0; max-width: 520px;">Temporary subcategory page for Hair Accessories inside Style. This will later become a filtered page with products, posts, and editorial collections.</p>
-      <a href="Base de categoria principal do site..dc.html" style="margin-top: 10px; display: inline-block; background: oklch(20% 0.015 60); color: white; font-size: 15px; font-weight: 600; padding: 13px 24px; border-radius: 999px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 6px 12px oklch(20% 0.02 60 / 0.3);">Back to Style</a>
+      <a href="/explore/style/" style="margin-top: 10px; display: inline-block; background: oklch(20% 0.015 60); color: white; font-size: 15px; font-weight: 600; padding: 13px 24px; border-radius: 999px; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-4px); box-shadow: 0 6px 12px oklch(20% 0.02 60 / 0.3);">Back to Style</a>
     </div>
   </section>
 
@@ -145,7 +146,7 @@
   <!-- COOKIE CONSENT -->
   <sc-if value="{{ showCookieBanner }}" hint-placeholder-val="{{ false }}">
     <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 100; background: oklch(20% 0.015 60); color: white; padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; box-shadow: 0 -8px 24px oklch(20% 0.02 60 / 0.2);">
-      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="Politica de Privacidade.dc.html" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
+      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="/privacy-policy/" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
       <button onClick="{{ acceptCookies }}" style="padding: 10px 24px; border-radius: 999px; border: none; background: white; color: oklch(20% 0.015 60); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 20px oklch(20% 0.02 60 / 0.3);">Accept</button>
     </div>
   </sc-if>
@@ -154,27 +155,27 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 const THEMES_LIST = [
-  { label: 'Style', href: 'Base de categoria principal do site..dc.html' },
-  { label: 'Beauty', href: 'Base de Categoria - Beauty.dc.html' },
-  { label: 'Home', href: 'Base de Categoria - Home.dc.html' },
-  { label: 'Lifestyle', href: 'Base de Categoria - Lifestyle.dc.html' },
-  { label: 'Tech', href: 'Base de Categoria - Tech.dc.html' },
-  { label: 'Health', href: 'Base de Categoria - Health.dc.html' },
-  { label: 'Hobbies', href: 'Base de Categoria - Hobbies.dc.html' },
-  { label: 'Aesthetics', href: 'Base de Categoria - Aesthetics.dc.html' },
+  { label: 'Style', href: '/explore/style/' },
+  { label: 'Beauty', href: '/explore/beauty/' },
+  { label: 'Home', href: '/explore/home/' },
+  { label: 'Lifestyle', href: '/explore/lifestyle/' },
+  { label: 'Tech', href: '/explore/tech/' },
+  { label: 'Health', href: '/explore/health/' },
+  { label: 'Hobbies', href: '/explore/hobbies/' },
+  { label: 'Aesthetics', href: '/explore/aesthetics/' },
 ];
 const PRODUCTS_LIST = [
-  { label: 'Bestsellers', href: 'Base de Products - Bestsellers.dc.html' },
-  { label: 'New', href: 'Base de Products - Novo.dc.html' },
-  { label: "Editor's Pick", href: 'Base de Products - Editors Pick.dc.html' },
-  { label: 'Trending', href: 'Base de Products - Tendencia.dc.html' },
-  { label: 'Essential', href: 'Base de Products - Essencial.dc.html' },
+  { label: 'Bestsellers', href: '/products/bestsellers/' },
+  { label: 'New', href: '/products/new/' },
+  { label: "Editor's Pick", href: '/products/editors-pick/' },
+  { label: 'Trending', href: '/products/trending/' },
+  { label: 'Essential', href: '/products/essential/' },
 ];
 const TOOLS_LIST = [
-  { label: 'Patient Manager', href: 'Tool - Patient Manager.dc.html' },
-  { label: 'Life Planner', href: 'Tool - Life Planner.dc.html' },
-  { label: 'Skincare Organizer', href: 'Tool - Skincare Organizer.dc.html' },
-  { label: 'Content Hub', href: 'Tool - Content Hub.dc.html' },
+  { label: 'Patient Manager', href: '/tools/patient-manager/' },
+  { label: 'Life Planner', href: '/tools/life-planner/' },
+  { label: 'Skincare Organizer', href: '/tools/skincare-organizer/' },
+  { label: 'Content Hub', href: '/tools/content-hub/' },
 ];
 class Component extends DCLogic {
   state = {

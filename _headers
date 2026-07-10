@@ -1,0 +1,23 @@
+/tools/patient-manager/*
+  X-Robots-Tag: noindex, follow
+
+/tools/life-planner/*
+  X-Robots-Tag: noindex, follow
+
+/tools/skincare-organizer/*
+  X-Robots-Tag: noindex, follow
+
+/tools/content-hub/*
+  X-Robots-Tag: noindex, follow
+
+/search/*
+  X-Robots-Tag: noindex, follow
+
+/coming-soon/*
+  X-Robots-Tag: noindex, follow
+
+/templates/blog-post/*
+  X-Robots-Tag: noindex, follow
+
+/templates/product/*
+  X-Robots-Tag: noindex, follow

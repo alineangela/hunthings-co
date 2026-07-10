@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<base href="/">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script src="./support.js"></script>
@@ -58,7 +59,7 @@
           <button type="button" onClick="{{ item.onClick }}" style="{{ item.style }}">{{ item.label }}</button>
         </sc-for>
       </nav>
-      <a href="Home.dc.html" style="{{ logoStyle }}">
+      <a href="/" style="{{ logoStyle }}">
         <img src="assets/logo-novo-cropped.webp" alt="hunthings.co" style="{{ logoImgStyle }}" />
       </a>
       <nav style="{{ navRightStyle }}">
@@ -91,7 +92,7 @@
                 <a href="{{ result.href }}" style="display: flex; justify-content: space-between; gap: 16px; padding: 11px 14px; border-bottom: 1px solid rgba(0,0,0,.07); color: #171717; text-decoration: none; font-family: Inter, sans-serif; font-size: 13px; transition: opacity .15s ease;" style-hover="opacity: .55;"><span>{{ result.label }}</span><span style="color: #8a8578; text-transform: uppercase; letter-spacing: .06em; font-size: 10px; white-space: nowrap;">{{ result.type }}</span></a>
               </sc-for>
             </div>
-            <a href="Busca.dc.html" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
+            <a href="/search/" style="display: block; padding: 12px 14px; color: #171717; font-family: Inter, sans-serif; font-size: 12px; font-weight: 700; text-align: center; text-decoration: underline; text-underline-offset: 3px;">View all results</a>
           </sc-if>
           <sc-if value="{{ !hasSearchResults }}" hint-placeholder-val="false">
             <div style="padding: 14px; color: #8a8578; font-family: Inter, sans-serif; font-size: 13px;">No results found yet.</div>
@@ -131,7 +132,7 @@
 
   <!-- ARTICLE -->
   <article style="max-width: 760px; margin: 56px auto 0; padding: 0 32px;">
-    <div style="font-size: 13px; color: oklch(46% 0.01 60); margin-bottom: 18px;"><a href="Base de categoria principal do site..dc.html" style="color: oklch(46% 0.01 60); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s ease;" style-hover="text-decoration-color: oklch(46% 0.01 60);">Home</a> / <a href="Base de categoria principal do site..dc.html" style="color: oklch(46% 0.01 60); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s ease;" style-hover="text-decoration-color: oklch(46% 0.01 60);">Style</a> / <span style="text-decoration: underline; text-underline-offset: 3px;">Streetwear</span></div>
+    <div style="font-size: 13px; color: oklch(46% 0.01 60); margin-bottom: 18px;"><a href="/explore/style/" style="color: oklch(46% 0.01 60); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s ease;" style-hover="text-decoration-color: oklch(46% 0.01 60);">Home</a> / <a href="/explore/style/" style="color: oklch(46% 0.01 60); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .15s ease;" style-hover="text-decoration-color: oklch(46% 0.01 60);">Style</a> / <span style="text-decoration: underline; text-underline-offset: 3px;">Streetwear</span></div>
     <h1 style="font-family: 'Instrument Serif', serif; font-weight: 500; font-size: 40px; line-height: 1.15; margin: 0 0 16px;">Streetwear além do hype</h1>
     <div style="font-size: 13px; color: oklch(46% 0.01 60); margin-bottom: 32px;">Por Redação Hunthings · 30 de junho de 2026</div>
 
@@ -183,49 +184,49 @@
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Explore</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="Base de categoria principal do site..dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Style</a>
-            <a href="Base de Categoria - Beauty.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Beauty</a>
-            <a href="Base de Categoria - Home.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Home</a>
-            <a href="Base de Categoria - Lifestyle.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Lifestyle</a>
-            <a href="Base de Categoria - Tech.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Tech</a>
-            <a href="Base de Categoria - Health.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Health</a>
-            <a href="Base de Categoria - Hobbies.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Hobbies</a>
-            <a href="Base de Categoria - Aesthetics.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Aesthetics</a>
+            <a href="/explore/style/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Style</a>
+            <a href="/explore/beauty/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Beauty</a>
+            <a href="/explore/home/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Home</a>
+            <a href="/explore/lifestyle/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Lifestyle</a>
+            <a href="/explore/tech/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Tech</a>
+            <a href="/explore/health/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Health</a>
+            <a href="/explore/hobbies/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Hobbies</a>
+            <a href="/explore/aesthetics/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Aesthetics</a>
           </div>
         </div>
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Tools</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="Tool - Patient Manager.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Patient Manager</a>
-            <a href="Tool - Life Planner.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Life Planner</a>
-            <a href="Tool - Skincare Organizer.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Skincare Organizer</a>
-            <a href="Tool - Content Hub.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Content Hub</a>
+            <a href="/tools/patient-manager/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Patient Manager</a>
+            <a href="/tools/life-planner/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Life Planner</a>
+            <a href="/tools/skincare-organizer/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Skincare Organizer</a>
+            <a href="/tools/content-hub/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Content Hub</a>
           </div>
         </div>
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Products</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="Base de Produtos - Bestsellers.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Bestsellers</a>
-            <a href="Base de Produtos - Novo.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">New</a>
-            <a href="Base de Produtos - Editors Pick.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Editor's Pick</a>
-            <a href="Base de Produtos - Tendencia.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Trending</a>
-            <a href="Base de Produtos - Essencial.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Essential</a>
+            <a href="/products/bestsellers/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Bestsellers</a>
+            <a href="/products/new/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">New</a>
+            <a href="/products/editors-pick/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Editor's Pick</a>
+            <a href="/products/trending/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Trending</a>
+            <a href="/products/essential/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Essential</a>
           </div>
         </div>
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Site</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="Sobre.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">About</a>
-            <a href="Contato.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Contact</a>
-            <a href="Busca.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Search</a>
+            <a href="/about/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">About</a>
+            <a href="/contact/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Contact</a>
+            <a href="/search/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Search</a>
           </div>
         </div>
         <div>
           <div style="font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: oklch(46% 0.01 60); margin-bottom: 14px;">Legal</div>
           <div style="display: flex; flex-direction: column; gap: 8px;">
-            <a href="Politica de Privacidade.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Privacy Policy</a>
-            <a href="Termos de Uso.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Terms of Use</a>
-            <a href="Disclosure de Afiliado.dc.html" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Affiliate Disclosure</a>
+            <a href="/privacy-policy/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Privacy Policy</a>
+            <a href="/terms-of-use/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Terms of Use</a>
+            <a href="/affiliate-disclosure/" style="color: oklch(18% 0.01 60); font-size: 14px; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: color .15s ease, text-decoration-color .15s ease;" style-hover="color: oklch(18% 0.01 60 / 0.55); text-decoration-color: oklch(18% 0.01 60 / 0.55);">Affiliate Disclosure</a>
           </div>
         </div>
       </div>
@@ -236,7 +237,7 @@
   <!-- COOKIE CONSENT -->
   <sc-if value="{{ showCookieBanner }}" hint-placeholder-val="{{ false }}">
     <div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 100; background: oklch(20% 0.015 60); color: white; padding: 20px 32px; display: flex; align-items: center; justify-content: center; gap: 24px; flex-wrap: wrap; box-shadow: 0 -8px 24px oklch(20% 0.02 60 / 0.2);">
-      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="Politica de Privacidade.dc.html" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
+      <span style="font-size: 14px; max-width: 560px;">Usamos cookies para melhorar sua experiência e personalizar conteúdo. Veja nossa <a href="/privacy-policy/" style="color: white; text-decoration: underline;">Privacy Policy</a>.</span>
       <button onClick="{{ acceptCookies }}" style="padding: 10px 24px; border-radius: 999px; border: none; background: white; color: oklch(20% 0.015 60); font-size: 14px; font-weight: 600; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease;" style-hover="transform: translateY(-3px); box-shadow: 0 10px 20px oklch(20% 0.02 60 / 0.3);">Aceitar</button>
     </div>
   </sc-if>
@@ -245,27 +246,27 @@
 </x-dc>
 <script type="text/x-dc" data-dc-script>
 const THEMES_LIST = [
-  { label: 'Style', href: 'Base de categoria principal do site..dc.html' },
-  { label: 'Beauty', href: 'Base de Categoria - Beauty.dc.html' },
-  { label: 'Home', href: 'Base de Categoria - Home.dc.html' },
-  { label: 'Lifestyle', href: 'Base de Categoria - Lifestyle.dc.html' },
-  { label: 'Tech', href: 'Base de Categoria - Tech.dc.html' },
-  { label: 'Health', href: 'Base de Categoria - Health.dc.html' },
-  { label: 'Hobbies', href: 'Base de Categoria - Hobbies.dc.html' },
-  { label: 'Aesthetics', href: 'Base de Categoria - Aesthetics.dc.html' },
+  { label: 'Style', href: '/explore/style/' },
+  { label: 'Beauty', href: '/explore/beauty/' },
+  { label: 'Home', href: '/explore/home/' },
+  { label: 'Lifestyle', href: '/explore/lifestyle/' },
+  { label: 'Tech', href: '/explore/tech/' },
+  { label: 'Health', href: '/explore/health/' },
+  { label: 'Hobbies', href: '/explore/hobbies/' },
+  { label: 'Aesthetics', href: '/explore/aesthetics/' },
 ];
 const PRODUCTS_LIST = [
-  { label: 'Bestsellers', href: 'Base de Produtos - Bestsellers.dc.html' },
-  { label: 'New', href: 'Base de Produtos - Novo.dc.html' },
-  { label: "Editor's Pick", href: 'Base de Produtos - Editors Pick.dc.html' },
-  { label: 'Trending', href: 'Base de Produtos - Tendencia.dc.html' },
-  { label: 'Essential', href: 'Base de Produtos - Essencial.dc.html' },
+  { label: 'Bestsellers', href: '/products/bestsellers/' },
+  { label: 'New', href: '/products/new/' },
+  { label: "Editor's Pick", href: '/products/editors-pick/' },
+  { label: 'Trending', href: '/products/trending/' },
+  { label: 'Essential', href: '/products/essential/' },
 ];
 const TOOLS_LIST = [
-  { label: 'Patient Manager', href: 'Tool - Patient Manager.dc.html' },
-  { label: 'Life Planner', href: 'Tool - Life Planner.dc.html' },
-  { label: 'Skincare Organizer', href: 'Tool - Skincare Organizer.dc.html' },
-  { label: 'Content Hub', href: 'Tool - Content Hub.dc.html' },
+  { label: 'Patient Manager', href: '/tools/patient-manager/' },
+  { label: 'Life Planner', href: '/tools/life-planner/' },
+  { label: 'Skincare Organizer', href: '/tools/skincare-organizer/' },
+  { label: 'Content Hub', href: '/tools/content-hub/' },
 ];
 function swatch(hue) {
   return `repeating-linear-gradient(135deg, oklch(91% 0.025 ${hue}), oklch(91% 0.025 ${hue}) 12px, oklch(85% 0.035 ${hue}) 12px, oklch(85% 0.035 ${hue}) 24px)`;
@@ -278,8 +279,8 @@ const CITED = [
 ].map((p) => ({ ...p, swatch: swatch(p.hue) }));
 
 const POSTS = [
-  { title: 'Como montar um capsule wardrobe de verdade', excerpt: 'Menos peças, mais combinações — o guia prático pra parar de comprar sem pensar, de vez.', href: 'Base de Blog Post.dc.html' },
-  { title: 'Streetwear além do hype', excerpt: 'Marcas e peças que sobrevivem à moda passageira e valem o investimento.', href: 'Base de Blog Post.dc.html' },
+  { title: 'Como montar um capsule wardrobe de verdade', excerpt: 'Menos peças, mais combinações — o guia prático pra parar de comprar sem pensar, de vez.', href: '/templates/blog-post/' },
+  { title: 'Streetwear além do hype', excerpt: 'Marcas e peças que sobrevivem à moda passageira e valem o investimento.', href: '/templates/blog-post/' },
 ];
 const PRODUCTS = [
   { name: 'Jaqueta utilitária', href: '#' },
@@ -287,10 +288,10 @@ const PRODUCTS = [
   { name: 'Cinto reversível', href: '#' },
 ];
 const TOOLS = [
-  { name: 'Patient Manager', href: 'Tool - Patient Manager.dc.html' },
-  { name: 'Life Planner', href: 'Tool - Life Planner.dc.html' },
-  { name: 'Skincare Organizer', href: 'Tool - Skincare Organizer.dc.html' },
-  { name: 'Content Hub', href: 'Tool - Content Hub.dc.html' },
+  { name: 'Patient Manager', href: '/tools/patient-manager/' },
+  { name: 'Life Planner', href: '/tools/life-planner/' },
+  { name: 'Skincare Organizer', href: '/tools/skincare-organizer/' },
+  { name: 'Content Hub', href: '/tools/content-hub/' },
 ];
 
 class Component extends DCLogic {
