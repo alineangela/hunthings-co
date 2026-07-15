@@ -305,65 +305,30 @@
 
   <div style="max-width: 1240px; margin: 0 auto; padding: 0 32px;"><div style="border-top: 1px solid oklch(88% 0.01 70);"></div></div>
 
-  <div class="background-lab-intro">
-    <p>Temporary background study</p>
-    <h2>Choose the atmosphere</h2>
-  </div>
-
-  <!-- TOOLS BAND / CURRENT REFERENCE -->
-  <section style="position: relative; background: #3b1509 url('/assets/life-planner-background.png') center / cover no-repeat; padding: 88px 32px 72px; text-align: center;">
-    <span class="amber-test__label">01 · Solid burgundy</span>
-    <p style="font-family: 'Fira Code', monospace; font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: #faf39c; margin: 0 0 18px;">Hunthings Tools</p>
-    <h2 style="font-family: 'Instrument Serif', serif; font-weight: 400; font-size: 32px; color: white; margin: 0 0 18px;">Solutions for your routine</h2>
-    <p style="font-size: 16px; color: oklch(85% 0.01 60); max-width: 480px; margin: 0 auto 28px; line-height: 1.6;">Tools to organize, plan, and manage different areas of your life with high performance.</p>
-    <a href="/tools/" style="display: inline-block; border: 1px solid oklch(88% 0.01 70); border-radius: 999px; width: fit-content; max-width: min(100%,300px); padding: 15px 32px; background: white; color: oklch(18% 0.01 60); font-family: Inter, sans-serif; font-size: 15px; font-weight: 600; letter-spacing: .01em; line-height: 1.22; text-align: center; cursor: pointer; text-decoration: none; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;" style-hover="transform: translateY(-4px) scale(1.035); box-shadow: 0 10px 24px oklch(20% 0.02 60 / 0.22); border-color: oklch(82% 0.01 70);">Choose yours</a>
-  </section>
-
-  <section class="amber-test amber-test--beauty" data-amber-test>
-    <span class="amber-test__label">02 · Amber resin + parallax</span>
-    <div class="amber-test__parallax"><div class="amber-test__background"></div></div>
-    <div class="amber-test__tint"></div>
-    <div class="amber-test__grain"></div>
-    <div class="amber-test__content">
-      <p class="amber-test__eyebrow">Hunthings Tools</p>
-      <h2 class="amber-test__title">Solutions for your routine</h2>
-      <p class="amber-test__copy">Tools to organize, plan, and manage different areas of your life with high performance.</p>
-      <a class="amber-test__button" href="/tools/">Choose yours</a>
+  <!-- HUNTHINGS TOOLS / AMBER FEATURE -->
+  <section class="amber-feature" data-amber-feature data-active="false" aria-labelledby="amber-feature-title">
+    <div class="amber-feature__parallax" aria-hidden="true">
+      <div class="amber-feature__scene">
+        <img class="amber-feature__image" src="assets/life-planner-background.png" alt="" loading="lazy" decoding="async" fetchpriority="low" />
+        <div class="amber-feature__ribbons"></div>
+        <div class="amber-feature__shine"></div>
+      </div>
     </div>
-  </section>
-
-  <section class="amber-test amber-test--light" data-amber-test>
-    <span class="amber-test__label">03 · Layered amber light</span>
-    <div class="amber-test__parallax"><div class="amber-test__light"></div></div>
-    <div class="amber-test__tint"></div>
-    <div class="amber-test__grain"></div>
-    <div class="amber-test__content">
-      <p class="amber-test__eyebrow">Hunthings Tools</p>
-      <h2 class="amber-test__title">Solutions for your routine</h2>
-      <p class="amber-test__copy">Tools to organize, plan, and manage different areas of your life with high performance.</p>
-      <a class="amber-test__button" href="/tools/">Choose yours</a>
+    <div class="amber-feature__overlay" aria-hidden="true"></div>
+    <div class="amber-feature__grain" aria-hidden="true"></div>
+    <div class="amber-feature__content">
+      <p class="amber-feature__eyebrow">Hunthings Tools</p>
+      <h2 class="amber-feature__title" id="amber-feature-title">Solutions for your routine</h2>
+      <p class="amber-feature__copy">Tools to organize, plan, and manage different areas of your life with high performance.</p>
+      <a class="amber-feature__button" href="/tools/">Choose yours</a>
     </div>
+    <svg class="amber-feature__filters" aria-hidden="true" focusable="false">
+      <filter id="amber-feature-distortion" x="-8%" y="-8%" width="116%" height="116%">
+        <feTurbulence id="amber-feature-noise" type="fractalNoise" baseFrequency="0.008 0.015" numOctaves="2" seed="4" result="noise"></feTurbulence>
+        <feDisplacementMap id="amber-feature-displacement" in="SourceGraphic" in2="noise" scale="10" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
+      </filter>
+    </svg>
   </section>
-
-  <section class="amber-test amber-test--liquid" data-amber-test>
-    <span class="amber-test__label">04 · Amber resin + liquid motion</span>
-    <div class="amber-test__parallax"><div class="amber-test__background"></div></div>
-    <div class="amber-test__tint"></div>
-    <div class="amber-test__grain"></div>
-    <div class="amber-test__content">
-      <p class="amber-test__eyebrow">Hunthings Tools</p>
-      <h2 class="amber-test__title">Solutions for your routine</h2>
-      <p class="amber-test__copy">Tools to organize, plan, and manage different areas of your life with high performance.</p>
-      <a class="amber-test__button" href="/tools/">Choose yours</a>
-    </div>
-  </section>
-
-  <svg class="amber-filters" aria-hidden="true" focusable="false">
-    <filter id="amber-liquid-distortion">
-      <feTurbulence id="amber-liquid-noise" type="fractalNoise" baseFrequency="0.008 0.015" numOctaves="2" seed="4" result="noise"></feTurbulence>
-      <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G"></feDisplacementMap>
-    </filter>
-  </svg>
 
   <!-- FOOTER -->
   <footer style="border-top: 1px solid oklch(88% 0.01 70); padding: 56px 32px 32px; background: #F8F8F6;">

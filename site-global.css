@@ -22,5 +22,4 @@
 .hunthings-product-carousel__track::-webkit-scrollbar-thumb { border: 3px solid white; border-radius: 999px; background: #201712; }
 .hunthings-product-carousel__arrow { position: absolute; top: 50%; z-index: 2; width: 34px; height: 34px; border: 1px solid #201712; border-radius: 50%; background: white; color: #201712; cursor: pointer; transform: translateY(-50%); font-size: 20px; line-height: 1; }
 .hunthings-product-carousel__arrow--prev { left: -12px; }.hunthings-product-carousel__arrow--next { right: -12px; }
-.background-lab-intro, .amber-test, .amber-filters { display: none !important; }
 @media (max-width: 640px) { .hunthings-life-planner { min-height: 500px; padding: 64px 22px; }.hunthings-coming-soon { padding: 64px 20px; }.hunthings-product-carousel__arrow--prev { left: 4px; }.hunthings-product-carousel__arrow--next { right: 4px; } }
