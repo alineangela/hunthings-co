@@ -13,7 +13,7 @@ export const HEADER_NAV_HTML = `
       <div style="max-width: 1240px; margin: 0 auto; padding: 36px 32px 44px;">
         <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 40px;">
           <div>
-            <div style="font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: {{ exploreLabelColor }}; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid oklch(90% 0.008 70);">Themes for you</div>
+            <div style="font-size: 12px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: {{ exploreLabelColor }}; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid oklch(90% 0.008 70);">What are you into?</div>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 8px 20px;">
               <a href="Base de categoria principal do site..dc.html" style="text-decoration: none; color: oklch(18% 0.01 60); font-size: 16px; padding: 8px 0; font-weight: 500; transition: color .15s ease, text-decoration-color .15s ease; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px;" style-hover="color: oklch(68% 0.012 60); text-decoration-color: oklch(68% 0.012 60);">Style</a>
               <a href="Base de Categoria - Beauty.dc.html" style="text-decoration: none; color: oklch(18% 0.01 60); font-size: 16px; padding: 8px 0; font-weight: 500; transition: color .15s ease, text-decoration-color .15s ease; text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 4px;" style-hover="color: oklch(68% 0.012 60); text-decoration-color: oklch(68% 0.012 60);">Beauty</a>
