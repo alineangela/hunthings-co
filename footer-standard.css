@@ -38,18 +38,68 @@ body footer .hunthings-footer__columns section {
   display: flex;
   min-height: 236px;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   padding: 0 clamp(24px, 3vw, 46px);
   border-right: 1px solid oklch(88% 0.01 70);
+  text-align: center;
 }
 
 body footer .hunthings-footer__columns section:first-child { padding-left: 0; }
 body footer .hunthings-footer__columns section:last-child { padding-right: 0; border-right: 0; }
 body footer .hunthings-footer__columns h2 { width: 100%; margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid oklch(90% 0.008 70); color: oklch(46% 0.01 60); font: 500 12px/1.2 Inter, sans-serif; letter-spacing: .05em; text-transform: uppercase; }
-body footer .hunthings-footer__columns a { margin: 0 0 8px; color: oklch(18% 0.01 60); font: 400 14px/1.35 Inter, sans-serif; text-decoration: none; }
+body footer .hunthings-footer__columns a { margin: 0 0 8px; color: oklch(18% 0.01 60); font: 400 14px/1.35 Inter, sans-serif; text-align: center; text-decoration: none; }
 body footer .hunthings-footer__columns a:hover { opacity: .55; }
 body footer .hunthings-footer__signature { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 20px; border-top: 1px solid oklch(88% 0.01 70); text-align: center; color: oklch(46% 0.01 60); font: 13px/1.4 Inter, sans-serif; }
 body footer .hunthings-footer__signature img { display: block; width: 118px !important; height: auto !important; max-height: none !important; object-fit: contain; }
+
+body footer > div > div:first-child {
+  display: grid !important;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+  gap: 0 !important;
+  max-width: 1400px !important;
+  margin: 0 auto 40px !important;
+}
+
+body footer > div > div:first-child > div {
+  display: flex !important;
+  min-height: 236px !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  padding: 0 clamp(24px, 3vw, 46px) !important;
+  border-right: 1px solid oklch(88% 0.01 70) !important;
+  text-align: center !important;
+}
+
+body footer > div > div:first-child > div:first-child {
+  padding-left: 0 !important;
+}
+
+body footer > div > div:first-child > div:last-child {
+  padding-right: 0 !important;
+  border-right: 0 !important;
+}
+
+body footer > div > div:first-child > div > div:first-child {
+  width: 100% !important;
+  text-align: center !important;
+}
+
+body footer > div > div:first-child > div > div:last-child {
+  align-items: center !important;
+  text-align: center !important;
+}
+
+body footer > div > div:first-child a {
+  text-align: center !important;
+}
+
+body footer > div > div:last-child {
+  align-items: center !important;
+  justify-content: center !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  text-align: center !important;
+}
 
 @media (max-width: 760px) {
   body footer {
@@ -66,4 +116,18 @@ body footer .hunthings-footer__signature img { display: block; width: 118px !imp
   body footer .hunthings-footer__columns section { min-height: 0; padding: 0 0 24px; border-right: 0; border-bottom: 1px solid oklch(88% 0.01 70); }
   body footer .hunthings-footer__columns section:last-child { padding-bottom: 0; border-bottom: 0; }
   body footer .hunthings-footer__signature img { width: 106px !important; }
+  body footer > div > div:first-child {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+  }
+  body footer > div > div:first-child > div {
+    min-height: 0 !important;
+    padding: 0 0 24px !important;
+    border-right: 0 !important;
+    border-bottom: 1px solid oklch(88% 0.01 70) !important;
+  }
+  body footer > div > div:first-child > div:last-child {
+    padding-bottom: 0 !important;
+    border-bottom: 0 !important;
+  }
 }
