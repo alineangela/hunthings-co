@@ -50,7 +50,7 @@ body footer .hunthings-footer__columns h2 { width: 100%; margin: 0 0 14px; paddi
 body footer .hunthings-footer__columns a { margin: 0 0 8px; color: oklch(18% 0.01 60); font: 400 14px/1.35 Inter, sans-serif; text-align: center; text-decoration: none; }
 body footer .hunthings-footer__columns a:hover { opacity: .55; }
 body footer .hunthings-footer__signature { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-top: 20px; border-top: 1px solid oklch(88% 0.01 70); text-align: center; color: oklch(46% 0.01 60); font: 13px/1.4 Inter, sans-serif; }
-body footer .hunthings-footer__signature img { display: block; width: 118px !important; height: auto !important; max-height: none !important; object-fit: contain; }
+body footer .hunthings-footer__signature img { display: block; width: min(230px, calc(100vw - 64px)) !important; height: 100px !important; max-height: none !important; object-fit: cover; object-position: center; }
 
 body footer > div > div:first-child {
   display: grid !important;
@@ -115,7 +115,7 @@ body footer > div > div:last-child {
   body footer .hunthings-footer__columns { grid-template-columns: 1fr !important; gap: 24px; }
   body footer .hunthings-footer__columns section { min-height: 0; padding: 0 0 24px; border-right: 0; border-bottom: 1px solid oklch(88% 0.01 70); }
   body footer .hunthings-footer__columns section:last-child { padding-bottom: 0; border-bottom: 0; }
-  body footer .hunthings-footer__signature img { width: 106px !important; }
+  body footer .hunthings-footer__signature img { width: min(230px, calc(100vw - 44px)) !important; height: 100px !important; }
   body footer > div > div:first-child {
     grid-template-columns: 1fr !important;
     gap: 24px !important;
