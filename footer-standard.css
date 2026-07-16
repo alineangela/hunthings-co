@@ -44,8 +44,7 @@ body footer .hunthings-footer__columns section {
   text-align: center;
 }
 
-body footer .hunthings-footer__columns section:first-child { padding-left: 0; }
-body footer .hunthings-footer__columns section:last-child { padding-right: 0; border-right: 0; }
+body footer .hunthings-footer__columns section:last-child { border-right: 0; }
 body footer .hunthings-footer__columns h2 { width: 100%; margin: 0 0 14px; padding-bottom: 12px; border-bottom: 1px solid oklch(90% 0.008 70); color: oklch(46% 0.01 60); font: 500 12px/1.2 Inter, sans-serif; letter-spacing: .05em; text-transform: uppercase; }
 body footer .hunthings-footer__columns a { margin: 0 0 8px; color: oklch(18% 0.01 60); font: 400 14px/1.35 Inter, sans-serif; text-align: center; text-decoration: none; }
 body footer .hunthings-footer__columns a:hover { opacity: .55; }
@@ -70,12 +69,7 @@ body footer > div > div:first-child > div {
   text-align: center !important;
 }
 
-body footer > div > div:first-child > div:first-child {
-  padding-left: 0 !important;
-}
-
 body footer > div > div:first-child > div:last-child {
-  padding-right: 0 !important;
   border-right: 0 !important;
 }
 
