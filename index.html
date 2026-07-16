@@ -56,6 +56,7 @@
     .is-scrolling .efx-dot-icon:hover circle { fill: #d1d1d1 !important; animation: none !important; }
     .efx-service-card:hover .efx-service-list { opacity: 1 !important; transform: translateY(0) !important; }
     .efx-service-card:hover .efx-cat-glow { opacity: 1 !important; transform: scale(1) !important; backdrop-filter: blur(8px) saturate(1.08) !important; -webkit-backdrop-filter: blur(8px) saturate(1.08) !important; }
+    .efx-service-card, .efx-service-card:hover { transform: none !important; }
     .efx-cat-btn:hover { color: #fff !important; background: rgba(18,18,18,.72) !important; text-shadow: 0 0 7px rgba(255,255,255,.95), 0 0 20px rgba(255,255,255,.62) !important; }
     @media (max-width: 1060px) {
       .efx-cards-grid { grid-template-columns: repeat(2, minmax(0,1fr)) !important; }
@@ -691,5 +692,4 @@ class Component extends DCLogic {
 <script src="background-lab.js"></script>
 </body>
 </html>
-
 
